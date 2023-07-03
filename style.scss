@@ -4,6 +4,22 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+::-webkit-input-placeholder {
+  text-transform: initial;
+}
+
+:-moz-placeholder { 
+  text-transform: initial;
+}
+
+::-moz-placeholder {  
+  text-transform: initial;
+}
+
+:-ms-input-placeholder { 
+  text-transform: initial;
+}
+
 $light-red: hsl(0, 100%, 63%);
 
 body {
@@ -128,7 +144,11 @@ main {
         // margin-bottom: 1rem;
         margin-right: 0.5rem;
       }
-      
+
+      #card-holder {
+        text-transform: capitalize;
+      }
+
       input {
         margin-top: 0.3rem;
         width: 100%;
@@ -148,7 +168,7 @@ main {
         &:invalid {
           border-color: hsl(0, 100%, 50%);
         }
-        &:invalid:required + span:before {
+        &:invalid + span:before {
           content: "Can't be blank";
           color: $light-red;
           font-size: 0.6rem;

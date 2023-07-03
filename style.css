@@ -3,6 +3,22 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+::-webkit-input-placeholder {
+  text-transform: initial;
+}
+
+:-moz-placeholder {
+  text-transform: initial;
+}
+
+::-moz-placeholder {
+  text-transform: initial;
+}
+
+:-ms-input-placeholder {
+  text-transform: initial;
+}
+
 body {
   font-family: "Space Grotesk", sans-serif;
   height: 100svh;
@@ -124,6 +140,9 @@ main #center-box form label, main #center-box form legend {
 main #center-box form fieldset {
   margin-right: 0.5rem;
 }
+main #center-box form #card-holder {
+  text-transform: capitalize;
+}
 main #center-box form input {
   margin-top: 0.3rem;
   width: 100%;
@@ -147,7 +166,7 @@ main #center-box form input::placeholder {
 main #center-box form input:invalid {
   border-color: hsl(0, 100%, 50%);
 }
-main #center-box form input:invalid:required + span:before {
+main #center-box form input:invalid + span:before {
   content: "Can't be blank";
   color: hsl(0, 100%, 63%);
   font-size: 0.6rem;

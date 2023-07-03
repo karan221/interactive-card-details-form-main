@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive card details form</title>
+  <script src="imask.js"></script>
 </head>
 <body>
 
@@ -31,35 +32,35 @@
         </div>
       </div>
   
-      <form action="" method="post">
+      <form action="thanks" method="post">
         <fieldset>
           <label for="card-holder"> CARDHOLDER NAME </label>
-          <input id="card-holder" type="text" placeholder="e.g. Jane Appleseed" required="true">
+          <input id="card-holder" type="text" minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" required="true">
           <span>&nbsp;</span>
         </fieldset>
         <fieldset>
           <label for="card-number"> CARD NUMBER </label>
-          <input id="card-number" type="text" inputmode="numeric" pattern="\d{16}" placeholder="e.g. 1234 5678 9123 0000" required="true">
+          <input id="card-number" type="text" pattern="\d{16}" placeholder="e.g. 1234 5678 9123 0000" required="true">
           <span>&nbsp;</span>
         </fieldset>
         <div id="exp-cvv">
           <fieldset id="mmyy">
             <legend> EXP. DATE (MM/YY) </legend>
             <fieldset>
-              <input id="month" type="text" inputmode="numeric" max="12" min="1" placeholder="MM" required="true"> <span>&nbsp;</span>
+              <input id="month" type="text" placeholder="MM" required> <span>&nbsp;</span>
             </fieldset>
             <fieldset>
-              <input id="year" type="text" inputmode="numeric" max="99" min="23" placeholder="YY" required="true"> <span>&nbsp;</span>
+              <input id="year" type="text" placeholder="YY" required> <span>&nbsp;</span>
             </fieldset>
           </fieldset>
           <fieldset>
             <legend> CVC </legend>
             <fieldset>
-              <input id="card-cvc" type="text" inputmode="numeric" pattern="\d{3,4}" placeholder="e.g. 123" required="true"> <span>&nbsp;</span>
+              <input id="card-cvc" type="text" inputmode="numeric" placeholder="e.g. 123" required> <span>&nbsp;</span>
             </fieldset>
           </fieldset>
         </div>
-        <button id="sumbit">Confirm</button>
+        <button id="submit">Confirm</button>
       </form>
     </div>
   </main>
@@ -70,40 +71,6 @@
   We've added your card details
   Continue -->
 
-  <script>
-    const cardName = document.getElementById('name');
-    const cardNumber = document.getElementById('number');
-    const cardEXP = document.getElementById('exp');
-    const cardCVC = document.getElementById('cvc');
-
-    const nameInput = document.getElementById('card-holder');
-    const numberInput = document.getElementById('card-number');
-    const monthInput = document.getElementById('month');
-    const yearInput = document.getElementById('year');
-    const cvcInput = document.getElementById('card-cvc');
-
-    nameInput.addEventListener("keyup", () => {
-      cardName.innerHTML = nameInput.value.toUpperCase();
-    });
-    numberInput.addEventListener("keyup", () => {
-      cardNumber.innerHTML = formatCardNumber(numberInput.value.toUpperCase());
-    });
-    monthInput.addEventListener("keyup", () => {
-      const year = cardEXP.innerText.split("/")[1]
-      cardEXP.innerHTML = monthInput.value + "/" + year;
-    });
-    yearInput.addEventListener("keyup", () => {
-      const month = cardEXP.innerText.split("/")[0]
-      cardEXP.innerHTML = month + "/" + yearInput.value;
-    });
-    cvcInput.addEventListener("keyup", () => {
-      cardCVC.innerHTML = cvcInput.value;
-    });
-
-    const formatCardNumber = (number) => {
-      return String(number).replace(/(.{1,4})/g, '$1 ').trim();
-      // return String(number).replace(/((.{1,4})$|(.{1,4}))/g, (_, g1, g2) => g2 ? `${g2}` : `${g1}, `);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
