@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Interactive card details form</title>
-  <script src="imask.js"></script>
 </head>
 <body>
 
@@ -40,7 +39,7 @@
         </fieldset>
         <fieldset>
           <label for="card-number"> CARD NUMBER </label>
-          <input id="card-number" type="text" pattern="\d{16}" placeholder="e.g. 1234 5678 9123 0000">
+          <input id="card-number" type="text" pattern="[\d\s]{16}" placeholder="e.g. 1234 5678 9123 0000">
           <span>&nbsp;</span>
         </fieldset>
         <div id="exp-cvv">
@@ -71,6 +70,7 @@
   We've added your card details
   Continue -->
 
+  <script src="imask.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
