@@ -70,10 +70,10 @@ yearInput.addEventListener('blur', () => { yearMask.updateOptions({ lazy: true }
 cvcInput.addEventListener('focus', () => { cvcMask.updateOptions({ lazy: false }); }, true);
 cvcInput.addEventListener('blur', () => { cvcMask.updateOptions({ lazy: true }); }, true);
 
-cardMask.on("complete", () => { monthInput.focus(); });
-monthMask.on("complete", () => { yearInput.focus(); });
-yearMask.on("complete", () => { cvcInput.focus(); });
-cvcMask.on("complete", () => { submitButton.focus(); });
+// cardMask.on("complete", () => { monthInput.focus(); });
+// monthMask.on("complete", () => { yearInput.focus(); });
+// yearMask.on("complete", () => { cvcInput.focus(); });
+// cvcMask.on("complete", () => { submitButton.focus(); });
 
 nameMask.on("accept", () => {
   cardName.innerHTML = (nameMask.value || "JANE APPLESEED").toUpperCase();
