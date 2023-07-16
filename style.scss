@@ -98,6 +98,7 @@ main {
         top: 1.5rem;
       }
       span#number {
+        font-variant-numeric: tabular-nums;
         font-size: 1.4rem;
         bottom: 4rem;
         left: 2rem;
@@ -150,12 +151,15 @@ main {
       input {
         margin-top: 0.3rem;
         width: 100%;
-        border: hsl(270, 3%, 87%) 1px solid;
+        border: hsl(270, 3%, 87%) 1.5px solid;
         color:hsl(278, 68%, 11%);
         border-radius: 5px;
         font-size: 1rem;
         font-weight: 500;
         padding: 0.5rem;
+        &:valid {
+          border-color: hsl(270, 3%, 87%);
+        }
         &:focus {
           outline: none;
           border-color: hsl(278, 94%, 30%);
@@ -163,14 +167,19 @@ main {
         &::placeholder {
           color: hsl(279, 6%, 55%);
         }
-        &:invalid {
+        &:user-invalid {
           border-color: hsl(0, 100%, 50%);
         }
-        &:invalid + span:before {
+        &:user-invalid:required:placeholder-shown + span::before {
           content: "Can't be blank";
-          color: $light-red;
-          font-size: 0.6rem;
         }
+      }
+
+      .validation-message {
+        display: block;
+        padding-top: 0.4em;
+        color: $light-red;
+        font-size: 0.6rem;
       }
 
       fieldset {

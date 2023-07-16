@@ -7,9 +7,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Interactive card details form</title>
+  <title>Interactive Card Details Form</title>
 </head>
 <body>
 
@@ -34,31 +34,34 @@
         </div>
       </div>
   
-      <form action="thanks" method="post">
+      <form action="#" method="post">
         <fieldset>
           <label for="card-holder"> CARDHOLDER NAME </label>
-          <input id="card-holder" type="text" minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed">
-          <span>&nbsp;</span>
+          <input id="card-holder" type="text" required minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" aria-describedby="card-holder-validation" >
+          <span id="card-holder-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
         </fieldset>
         <fieldset>
           <label for="card-number"> CARD NUMBER </label>
-          <input id="card-number" type="text" pattern="[\d\s]{16}" placeholder="e.g. 1234 5678 9123 0000">
-          <span>&nbsp;</span>
+          <input id="card-number" type="text" inputmode="numeric" pattern="(\d{4} ){3}\d{4}" required placeholder="e.g. 1234 5678 9123 0000" aria-describedby="card-number-validation">
+          <span id="card-number-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
         </fieldset>
         <div id="exp-cvv">
           <fieldset id="mmyy">
             <legend> EXP. DATE (MM/YY) </legend>
             <fieldset>
-              <input id="month" type="text" placeholder="MM"> <span>&nbsp;</span>
+              <input id="month" type="text" inputmode="numeric" required placeholder="MM" aria-describedby="month-validation">
+              <span id="month-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
             </fieldset>
             <fieldset>
-              <input id="year" type="text" placeholder="YY"> <span>&nbsp;</span>
+              <input id="year" type="text" inputmode="numeric" required placeholder="YY" aria-describedby="year-validation">
+              <span id="year-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
             </fieldset>
           </fieldset>
           <fieldset>
             <legend> CVC </legend>
             <fieldset>
-              <input id="card-cvc" type="text" inputmode="numeric" placeholder="e.g. 123"> <span>&nbsp;</span>
+              <input id="card-cvc" type="text" inputmode="numeric" required placeholder="e.g. 123" aria-describedby="cvc-validation">
+              <span id="cvc-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
             </fieldset>
           </fieldset>
         </div>

@@ -107,7 +107,29 @@ window.addEventListener("load", () => {
   cardCVC.innerHTML = cvcMask.value || "000";
 });
 
-const validateForm = () => {
-  nameInput.checkValidity();
-  numberInput.checkValidity();
-}
+
+// Failed attempt to show validation errors
+// var masks = [cvcMask, yearMask, monthMask];
+
+// const validateControl = (control) => {
+//   const connectedValidationId = control.getAttribute('aria-describedby');
+//   const connectedValidation = connectedValidationId ? document.getElementById(connectedValidationId) : false;
+
+//   if (connectedValidation && control.validity.valueMissing) {
+//     connectedValidation.innerText = "Can't be blank";
+//     control.style.borderColor = 'hsl(0, 100%, 50%)';
+//   } else {
+//     connectedValidation.innerHTML = '&nbsp;';
+//   }
+// };
+
+// document.addEventListener('blur', function (event) {
+//   // Validate the field
+//   masks.forEach(m => { m.updateOptions({ lazy: true }); });
+//   validateControl(event.target);
+// }, true);
+
+// submitButton.onclick = (e) => {
+//   console.log('submit');
+//   [...document.getElementsByTagName('input')].forEach(i => { validateControl(i); });
+// };

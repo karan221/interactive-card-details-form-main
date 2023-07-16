@@ -99,6 +99,7 @@ main #center-box .front #circle {
   top: 1.5rem;
 }
 main #center-box .front span#number {
+  font-variant-numeric: tabular-nums;
   font-size: 1.4rem;
   bottom: 4rem;
   left: 2rem;
@@ -145,12 +146,15 @@ main #center-box form #card-holder {
 main #center-box form input {
   margin-top: 0.3rem;
   width: 100%;
-  border: hsl(270, 3%, 87%) 1px solid;
+  border: hsl(270, 3%, 87%) 1.5px solid;
   color: hsl(278, 68%, 11%);
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem;
+}
+main #center-box form input:valid {
+  border-color: hsl(270, 3%, 87%);
 }
 main #center-box form input:focus {
   outline: none;
@@ -162,11 +166,18 @@ main #center-box form input::-moz-placeholder {
 main #center-box form input::placeholder {
   color: hsl(279, 6%, 55%);
 }
-main #center-box form input:invalid {
+main #center-box form input:user-invalid {
   border-color: hsl(0, 100%, 50%);
 }
-main #center-box form input:invalid + span:before {
+main #center-box form input:user-invalid:required:-moz-placeholder-shown + span::before {
   content: "Can't be blank";
+}
+main #center-box form input:user-invalid:required:placeholder-shown + span::before {
+  content: "Can't be blank";
+}
+main #center-box form .validation-message {
+  display: block;
+  padding-top: 0.4em;
   color: hsl(0, 100%, 63%);
   font-size: 0.6rem;
 }
