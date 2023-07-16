@@ -34,39 +34,48 @@
         </div>
       </div>
   
-      <form action="#" method="post">
-        <fieldset>
-          <label for="card-holder"> CARDHOLDER NAME </label>
-          <input id="card-holder" type="text" required minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" aria-describedby="card-holder-validation" >
-          <span id="card-holder-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
-        </fieldset>
-        <fieldset>
-          <label for="card-number"> CARD NUMBER </label>
-          <input id="card-number" type="text" inputmode="numeric" pattern="(\d{4} ){3}\d{4}" required placeholder="e.g. 1234 5678 9123 0000" aria-describedby="card-number-validation">
-          <span id="card-number-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
-        </fieldset>
-        <div id="exp-cvv">
-          <fieldset id="mmyy">
-            <legend> EXP. DATE (MM/YY) </legend>
-            <fieldset>
-              <input id="month" type="text" inputmode="numeric" required placeholder="MM" aria-describedby="month-validation">
-              <span id="month-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
-            </fieldset>
-            <fieldset>
-              <input id="year" type="text" inputmode="numeric" required placeholder="YY" aria-describedby="year-validation">
-              <span id="year-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
-            </fieldset>
+      <div class="card-form">
+        <form onsubmit="thankYou(); return false;">
+          <fieldset>
+            <label for="card-holder"> CARDHOLDER NAME </label>
+            <input id="card-holder" type="text" required minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" aria-describedby="card-holder-validation" >
+            <span id="card-holder-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
           </fieldset>
           <fieldset>
-            <legend> CVC </legend>
-            <fieldset>
-              <input id="card-cvc" type="text" inputmode="numeric" required placeholder="e.g. 123" aria-describedby="cvc-validation">
-              <span id="cvc-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
-            </fieldset>
+            <label for="card-number"> CARD NUMBER </label>
+            <input id="card-number" type="text" inputmode="numeric" pattern="(\d{4} ){3}\d{4}" required placeholder="e.g. 1234 5678 9123 0000" aria-describedby="card-number-validation">
+            <span id="card-number-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
           </fieldset>
-        </div>
-        <button id="submit">Confirm</button>
-      </form>
+          <div id="exp-cvv">
+            <fieldset id="mmyy">
+              <legend> EXP. DATE (MM/YY) </legend>
+              <fieldset>
+                <input id="month" type="text" inputmode="numeric" required placeholder="MM" aria-describedby="month-validation">
+                <span id="month-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+              </fieldset>
+              <fieldset>
+                <input id="year" type="text" inputmode="numeric" required placeholder="YY" aria-describedby="year-validation">
+                <span id="year-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+              </fieldset>
+            </fieldset>
+            <fieldset>
+              <legend> CVC </legend>
+              <fieldset>
+                <input id="card-cvc" type="text" inputmode="numeric" required placeholder="e.g. 123" aria-describedby="cvc-validation">
+                <span id="cvc-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
+              </fieldset>
+            </fieldset>
+          </div>
+          <button id="submit">Confirm</button>
+        </form>
+      </div>
+
+      <div id="thank-you">
+        <div><img src="images/icon-complete.svg" alt="completed"></div>
+        <h1>Thank you!</h1>
+        <p>We've added your card details</p>
+        <button>Continue</button>
+      </div>
     </div>
   </main>
 

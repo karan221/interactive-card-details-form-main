@@ -133,3 +133,9 @@ window.addEventListener("load", () => {
 //   console.log('submit');
 //   [...document.getElementsByTagName('input')].forEach(i => { validateControl(i); });
 // };
+
+
+const thankYou = () => {
+  document.getElementsByTagName('form')[0].style.display = 'none';
+  document.getElementById('thank-you').style.display = 'flex';
+}

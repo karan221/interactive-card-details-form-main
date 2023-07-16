@@ -59,14 +59,14 @@ main {
     column-gap: 8rem;
     row-gap: 2rem;
 
-    img {
+    .fg-card img, .bg-card img {
       position: absolute;
       top: 0;
       left: 0;
       max-width: 100%;
       max-height: 100%;
       z-index: -1;
-    }
+    }    
 
     .fg-card { grid-area: img1 }
     .bg-card { grid-area: img2 }
@@ -128,10 +128,16 @@ main {
       }
     }
 
+    .card-form {
+      grid-area: form;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     form {
       width: 80%; 
-      grid-area: form;
-      align-self: center;
 
       label, legend {
         font-size: 0.8rem;
@@ -193,17 +199,36 @@ main {
         align-items: center;
       }
 
-      button {
-        margin-top: 1rem;
-        width: 100%;
-        border: grey 1px solid;
-        border-radius: 5px;
-        font-size: 1rem;
-        padding: 0.5rem;
-        background-color: hsl(278, 68%, 11%);
-        color: white;
-        cursor: pointer;
+    }
+
+    button {
+      margin-top: 1rem;
+      width: 100%;
+      border: grey 1px solid;
+      border-radius: 5px;
+      font-size: 1rem;
+      padding: 0.5rem;
+      background-color: hsl(278, 68%, 11%);
+      color: white;
+      cursor: pointer;
+    }
+
+    div#thank-you {
+      grid-area: form;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        background-size:contain;
       }
+
+      button {
+        width: 70%;
+      }
+
+      display: none;
     }
   }
 }

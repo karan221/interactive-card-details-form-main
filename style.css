@@ -56,7 +56,7 @@ main #center-box {
        column-gap: 8rem;
   row-gap: 2rem;
 }
-main #center-box img {
+main #center-box .fg-card img, main #center-box .bg-card img {
   position: absolute;
   top: 0;
   left: 0;
@@ -127,10 +127,15 @@ main #center-box .back span {
   bottom: 6.2rem;
   right: 3rem;
 }
+main #center-box .card-form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 main #center-box form {
   width: 80%;
-  grid-area: form;
-  align-self: center;
 }
 main #center-box form label, main #center-box form legend {
   font-size: 0.8rem;
@@ -190,7 +195,7 @@ main #center-box form #exp-cvv, main #center-box form #mmyy {
   display: flex;
   align-items: center;
 }
-main #center-box form button {
+main #center-box button {
   margin-top: 1rem;
   width: 100%;
   border: grey 1px solid;
@@ -200,4 +205,18 @@ main #center-box form button {
   background-color: hsl(278, 68%, 11%);
   color: white;
   cursor: pointer;
+}
+main #center-box div#thank-you {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+main #center-box div#thank-you img {
+  background-size: contain;
+}
+main #center-box div#thank-you button {
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */
