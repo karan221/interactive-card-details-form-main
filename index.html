@@ -13,10 +13,16 @@
 </head>
 <body>
 
-  <img id="bg-main-desktop" src="images/bg-main-desktop.png" alt="">
+  <div id="background"></div>
 
   <main>
     <div id="center-box">
+      <div class="bg-card">
+        <div class="back">
+          <img src="images/bg-card-back.png" alt="">
+          <span id="cvc"> 000 </span>
+        </div>
+      </div>
       <div class="fg-card">
         <div class="front">
           <img src="images/bg-card-front.png" alt="">
@@ -25,12 +31,6 @@
           <span id="number"> 0000 0000 0000 0000 </span>
           <span id="name">JANE APPLESEED</span>
           <span id="exp"> 00/00 </span>
-        </div>
-      </div>
-      <div class="bg-card">
-        <div class="back">
-          <img src="images/bg-card-back.png" alt="">
-          <span id="cvc"> 000 </span>
         </div>
       </div>
   
@@ -78,13 +78,6 @@
       </div>
     </div>
   </main>
-
-  <!-- Completed state start -->
-
-  <!-- Thank you!
-  We've added your card details
-  Continue -->
-
   <script src="imask.js"></script>
   <script src="script.js"></script>
 </body>
