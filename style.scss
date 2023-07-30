@@ -2,6 +2,10 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+* {
+  // border: 1px solid red;
+}
+
 ::-webkit-input-placeholder {
   text-transform: initial;
 }
@@ -100,7 +104,7 @@ main {
         left: 5rem;
         top: 1.5rem;
       }
-      span#number {
+      #number {
         font-variant-numeric: tabular-nums;
         font-size: 1.4rem;
         bottom: 4rem;
@@ -112,11 +116,11 @@ main {
         font-weight: 300;
         letter-spacing: 2px;
       }
-      span#name {
+      #name {
         bottom: 2rem;
         left: 2rem;
       }
-      span#exp {
+      #exp {
         bottom: 2rem;
         right: 2rem;
       }
@@ -245,52 +249,65 @@ main {
     background-size: cover;
     width: 100%;
     height: 15rem;
-    position: static;
+  }
+  #center-box .fg-card .front span#number {
+    font-size: 1rem;
   }
   main {
     height: auto;
     min-width: 20rem;
     #center-box {
+      height: auto;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      margin: 0 1rem;
       column-gap: 0;
       row-gap: 0;
       .fg-card, .bg-card {
-        position: absolute;
-        width: 100%;
+        width: 80%;
+        min-width: 16.5rem;
       }
-      .bg-card { top: 1rem; }
-      .fg-card { top: 7rem; left: 2rem; }
+
+      .bg-card {
+        float: right;
+        margin: 1rem;
+      }
+
+      .fg-card {
+        position: absolute;
+        top: 7.5rem;
+        margin-left: 1rem;
+        z-index: 20;
+      }
+      .bg-card {
+        margin-left: auto;
+      }
       .fg-card img, .bg-card img {
         position: relative;
       }
-      .front, .back {
-        -webkit-transform:scale(0.85);
-        -moz-transform:scale(0.85);
-        -ms-transform:scale(0.85);
-        transform:scale(0.85);
-      }
       .back {
-        width: 70%;
-        min-width: 22rem;
         float: right;
         span {
-          bottom: 6rem;
+          font-size: 1rem;
+          bottom: 4.7rem;
+          right: 2rem;
         }
+        margin: 0;
       }
       .front {
-        width: 70%;
-        min-width: 22rem;
-        float: left;
+        margin: 0;
       }
       .card-form {
         padding: 1rem;
-        margin-top: 4rem
+        margin-top: 6rem
       }
       form {
         width: 100%;
         min-width: 310px;
+      }
+      #thank-you {
+        margin: 1rem;
+        margin-top: 7rem;
       }
     }
   }

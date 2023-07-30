@@ -38,23 +38,23 @@
         <form onsubmit="thankYou(); return false;">
           <fieldset>
             <label for="card-holder"> CARDHOLDER NAME </label>
-            <input id="card-holder" type="text" required minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" aria-describedby="card-holder-validation" >
+            <input id="card-holder" type="text" required minlength="3" maxlength="26" placeholder="e.g. Jane Appleseed" aria-describedby="card-holder-validation" autocomplete="cc-name">
             <span id="card-holder-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
           </fieldset>
           <fieldset>
             <label for="card-number"> CARD NUMBER </label>
-            <input id="card-number" type="text" inputmode="numeric" pattern="(\d{4} ){3}\d{4}" required placeholder="e.g. 1234 5678 9123 0000" aria-describedby="card-number-validation">
+            <input id="card-number" type="text" inputmode="numeric" pattern="(\d{4} ){3}\d{4}" required placeholder="e.g. 1234 5678 9123 0000" aria-describedby="card-number-validation" autocomplete="cc-number">
             <span id="card-number-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
           </fieldset>
           <div id="exp-cvv">
             <fieldset id="mmyy">
               <legend> EXP. DATE (MM/YY) </legend>
               <fieldset>
-                <input id="month" type="text" inputmode="numeric" required placeholder="MM" aria-describedby="month-validation">
+                <input id="month" type="text" inputmode="numeric" required placeholder="MM" aria-describedby="month-validation" autocomplete="cc-exp-month">
                 <span id="month-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
               </fieldset>
               <fieldset>
-                <input id="year" type="text" inputmode="numeric" required placeholder="YY" aria-describedby="year-validation">
+                <input id="year" type="text" inputmode="numeric" required placeholder="YY" aria-describedby="year-validation" autocomplete="cc-exp-year">
                 <span id="year-validation" class="validation-message" aria-live="assertive">&nbsp;</span>
               </fieldset>
             </fieldset>

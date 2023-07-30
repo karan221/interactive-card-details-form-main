@@ -136,6 +136,6 @@ window.addEventListener("load", () => {
 
 
 const thankYou = () => {
-  document.getElementsByTagName('form')[0].style.display = 'none';
+  document.getElementsByClassName('card-form')[0].style.display = 'none';
   document.getElementById('thank-you').style.display = 'flex';
 }
