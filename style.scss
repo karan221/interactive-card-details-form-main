@@ -36,9 +36,11 @@ body {
 
 #background {
   background: url("images/bg-main-desktop.png");
-  width: 25rem;
+  background-size: 100% 100%;
+  width: 25%;
   height: 100%;
   position: fixed;
+  left: 0;
   z-index: 0;
 }
 
