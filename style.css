@@ -33,7 +33,7 @@ body {
   width: 25rem;
   height: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: 0;
 }
 
 input {
@@ -65,7 +65,6 @@ main #center-box .fg-card img, main #center-box .bg-card img {
   left: 0;
   max-width: 100%;
   max-height: 100%;
-  z-index: -1;
 }
 main #center-box .fg-card {
   grid-area: img1;
